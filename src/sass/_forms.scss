@@ -1,0 +1,122 @@
+.contact{
+
+  .input__wrap{
+    width: 100%;
+    max-width: 407px;
+    height: 54px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    position: relative;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 0;
+      height: 0;
+      border-top: 54px solid rgb(255, 255, 255);
+      border-right: 50px solid transparent;
+    }
+  }
+
+  input{
+    display: block;
+    width: 100%;
+    height: 54px;
+    border: none;
+    outline: none;
+    color: rgb(169, 169, 169);
+    font-family: $Raleway;
+    font-size: 18px;
+    font-weight: 300;
+
+    @include placeholder($color:rgb(169, 169, 169));
+  }
+
+  .input__name{
+    background-image: url("../img/profile-male.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 0 15px 0 50px;
+    background-clip: padding-box;
+  }
+
+  .input__phone{
+    background-image: url("../img/phone.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 0 15px 0 50px;
+    background-clip: padding-box;
+  }
+
+  .input__email{
+    background-image: url("../img/mail-closed.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 0 15px 0 50px;
+    background-clip: padding-box;
+  }
+
+  .input__subject{
+    background-image: url("../img/subject.png");
+    background-repeat: no-repeat;
+    background-position: 10px;
+    padding: 0 15px 0 50px;
+    background-clip: padding-box;
+  }
+
+  .input__message{
+    background-image: url("../img/message.png");
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    padding: 15px 15px 0 50px;
+    background-clip: padding-box;
+  }
+
+
+  :focus::-webkit-input-placeholder {color: transparent};
+  :focus::-moz-placeholder          {color: transparent};
+  :focus:-moz-placeholder           {color: transparent};
+  :focus:-ms-input-placeholder      {color: transparent};
+
+  textarea{
+    max-width: 944px;
+    width: 100%;
+    height: 178px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(169, 169, 169);
+    font-family: $Raleway;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 20px 15px;
+    margin-bottom: 40px;
+
+    @include placeholder($color:rgb(169, 169, 169));
+  }
+
+  button{
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 54px;
+    border-radius: 27px;
+    border: 2px solid $base-color;
+    background-color: $stack-color;
+    color: $base-color;
+    font-family: $Raleway;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 auto;
+    @include transition(all .5s);
+
+    &:hover{
+      border: 2px solid $stack-color;
+      background-color: $base-color;
+      color: $stack-color;
+    }
+  }
+
+}

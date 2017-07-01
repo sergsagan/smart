@@ -1,0 +1,1612 @@
+//hero
+
+.hero{
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  min-height: 550px;
+  max-height: 852px;
+  background: url("../img/hero-bg.jpg") 50% no-repeat;
+  background-size: cover;
+
+  &__watch{
+    .watch{
+      position: relative;
+      z-index: 10;
+    }
+    .shadow{
+      position: absolute;
+      top: -3px;
+      right: 35px;
+      z-index: 0;
+    }
+  }
+  &__content{
+    padding-top: 120px;
+    h1{
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 30px;
+      text-transform: uppercase;
+      margin: 0 0 100px;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 90px;
+        width: 165px;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+    .descript{
+      display: block;
+      width: 100%;
+      max-width: 595px;
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+    .btn-buy{
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 224px;
+      width: 100%;
+      height: 48px;
+      border-radius: 24px;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(255, 255, 255);
+      color: rgb(69, 69, 69);
+      font-family: $Raleway;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-right: 25px;
+      @include transition(all .5s);
+
+      &:hover{
+        background-color: $stack-color;
+        color: $base-color;
+        border: 1px solid $base-color;
+      }
+    }
+    .price{
+      display: inline-block;
+      vertical-align: middle;
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 35px;
+    }
+  }
+}
+
+.header{
+  padding: 10px 0;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 60px;
+
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+  }
+
+  .navbar-default .navbar-header .header-brand{
+    .logo{
+      .icon-logo{
+        display: inline-block;
+        @include sprite($logo);
+      }
+    }
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    color: rgb(255, 255, 255);
+    font-family: $Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 35px;
+    position: relative;
+
+    &:hover{
+      &:before{
+        content: '';
+        position: absolute;
+        display: block;
+        top: -10px;
+        left: 50%;
+        width: 1px;
+        height: 20px;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+  }
+}
+
+.header.fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  background: rgb(7, 162, 234);
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  padding: 5px 15px;
+  height: 70px;
+  border-bottom:1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1024;
+
+  .navbar-default .navbar-nav > li > a:hover{
+    color: darken($base-color, 15%);
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.section__title{
+  font-family: $Questrial;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 35px;
+  color: rgb(1, 1, 1);
+  margin-bottom: 60px;
+
+  span{
+    color: rgb(1, 174, 255);
+  }
+
+}
+
+
+//advantages
+
+.advantages{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: auto;
+  padding: 115px 0;
+
+  .item{
+    text-align: center;
+
+    &__icon-baterry{
+      display: block;
+      margin: 0 auto 30px;
+      @include sprite($baterry);
+    }
+    &__icon-drop{
+      display: block;
+      margin: 0 auto 20px;
+      @include sprite($drop);
+    }
+    &__icon-service{
+      display: block;
+      margin: 0 auto 22px;
+      @include sprite($service);
+    }
+    &__heading{
+      display: block;
+      color: rgb(0, 0, 0);
+      font-family: $Raleway;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 48px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    &__line{
+      display: block;
+      width: 239px;
+      height: 1px;
+      background-color: rgb(1, 174, 255);
+      margin: 0 auto 20px;
+    }
+    &__text{
+      color: rgb(99, 99, 99);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+  }
+}
+
+//responsive-slider
+
+.slider{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+
+
+  .responsive{
+
+    .slick-slide {
+      &:focus, a {
+        outline: none;
+      }
+    }
+    .slick-prev, .slick-next {
+      top: auto;
+      bottom: 30px;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      z-index: 100;
+    }
+    .slick-prev {
+      left: 30%;
+      width: 23px;
+      height: 33px;
+      background: url("../img/mouse-ico.png") 0 0 no-repeat;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: -15px;
+        border: 6px solid transparent;
+        border-right: 6px solid $stack-color;
+        display: block;
+        width: 0;
+        height: 0;
+      }
+    }
+    .slick-next {
+      right: auto;
+      left: 32%;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: -9px;
+        border: 6px solid transparent;
+        border-left: 6px solid $stack-color;
+        display: block;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  /*.mouse-ico{
+    display: block;
+    @include sprite($mouse-ico);
+    position: absolute;
+    bottom: 12.6%;
+    left: 31%;
+  }*/
+
+  .item__slide{
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    min-height: 400px;
+    background: url("../img/slide-bg.png") 50% no-repeat;
+    background-size: cover;
+
+
+    &-left{
+      display: inline-block;
+      width: 49%;
+      height: 595px;
+      position: relative;
+    }
+    &-right{
+      display: inline-block;
+      width: 100%;
+      max-width: 50%;
+      height: 595px;
+      position: relative;
+    }
+  }
+
+  .information{
+    display: block;
+    width: 450px;
+    height: auto;
+
+    .title{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 24px;
+      margin-bottom: 25px;
+    }
+
+    .descript{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .rating{
+    width: 100%;
+    margin-bottom: 40px;
+
+    &__modern{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      width: 24%;
+
+      .rating-1{
+        display: block;
+        @include sprite($rating-1);
+        position: relative;
+        margin: 0 auto 5px;
+
+        .number{
+          display: block;
+          color: rgb(255, 255, 255);
+          font-family: $Raleway;
+          font-size: 27px;
+          font-weight: 500;
+          line-height: 13px;
+          margin-top: -3px;
+          margin-left: -2px;
+        }
+      }
+      .heading{
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    &__style{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      width: 24%;
+
+      .rating-2{
+        display: block;
+        @include sprite($rating-2);
+        position: relative;
+        margin: 0 auto 5px;
+
+        .number{
+          display: block;
+          color: rgb(255, 255, 255);
+          font-family: $Raleway;
+          font-size: 27px;
+          font-weight: 500;
+          line-height: 13px;
+          margin-top: -3px;
+          margin-left: -2px;
+        }
+      }
+      .heading{
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    &__original{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      width: 24%;
+
+      .rating-3{
+        display: block;
+        @include sprite($rating-3);
+        position: relative;
+        margin: 0 auto 5px;
+
+        .number{
+          display: block;
+          color: rgb(255, 255, 255);
+          font-family: $Raleway;
+          font-size: 27px;
+          font-weight: 500;
+          line-height: 13px;
+          margin-top: -3px;
+          margin-left: -2px;
+        }
+      }
+      .heading{
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+
+    }
+
+    &__price{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      width: 24%;
+
+      .rating-4{
+        display: block;
+        @include sprite($rating-3);
+        position: relative;
+        margin: 0 auto 5px;
+
+        .number{
+          display: block;
+          color: rgb(255, 255, 255);
+          font-family: $Raleway;
+          font-size: 27px;
+          font-weight: 500;
+          line-height: 13px;
+          margin-top: -3px;
+          margin-left: -2px;
+        }
+      }
+      .heading{
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+  .btn-buy{
+    display: block;
+    vertical-align: middle;
+    max-width: 224px;
+    width: 100%;
+    height: 48px;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(69, 69, 69);
+    font-family: $Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    @include transition(all .5s);
+
+    &:hover{
+      background-color: $stack-color;
+      color: $base-color;
+      border: 1px solid $base-color;
+    }
+
+  }
+}
+
+//shop
+
+.shop{
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: auto;
+  padding: 85px 0 185px;
+
+  .shop__item{
+    width: 245px;
+    height: 405px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.12);
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: -18px;
+      display: block;
+      width: 17px;
+      height: 327px;
+      background-color: $stack-color;
+    }
+
+    &-img{
+      margin-bottom: 25px;
+    }
+  }
+  .btn-buy{
+    display: block;
+    max-width: 157px;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 19px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(1, 174, 255);
+    color: rgb(69, 69, 69);
+    font-family: $Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    cursor: pointer;
+    @include transition(all .5s);
+
+    &:hover{
+      background-color: $stack-color;
+      color: $base-color;
+      border: 1px solid $base-color;
+      text-decoration: none;
+    }
+  }
+}
+
+//functions
+
+.functions{
+  width: 100%;
+  max-width: 1920px;
+  height: 315px;
+  margin: 0 auto;
+  position: relative;
+  background-color: $stack-color;
+  padding: 30px 0;
+  margin-bottom: 100px;
+
+  .pulsometer{
+    text-align: center;
+    padding: 15px 0;
+
+    .heart{
+      display: block;
+      margin: 0 auto 20px;
+      @include sprite($heart-ico);
+    }
+    .heading{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
+    .descript{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+  }
+
+  .pedometer{
+    text-align: center;
+    padding: 15px 0;
+
+    .shoe{
+      display: block;
+      margin: 0 auto 20px;
+      @include sprite($shoe-ico);
+    }
+    .heading{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
+    .descript{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+  }
+
+  .model{
+    width: 100%;
+    max-width: 486px;
+    height: 560px;
+    background-color: $base-color;
+    position: absolute;
+    top: -145px;
+    transform: skew(-15deg);
+
+    .model__picture{
+      transform: skew(15deg);
+    }
+  }
+}
+
+//rotate-360
+
+.rotate-360{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  .composition{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+
+    .svg__line1{
+      position: absolute;
+      top: 140px;
+      right: -260px;
+      z-index: 0;
+
+      .func{
+        color: rgb(0, 0, 0);
+        font-family: $Raleway;
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 34px;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .svg__line2{
+      position: absolute;
+      bottom: 140px;
+      right: -260px;
+      z-index: 0;
+
+      .func{
+        color: rgb(0, 0, 0);
+        font-family: $Raleway;
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 34px;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .svg__line3{
+      position: absolute;
+      bottom: 140px;
+      left: -260px;
+      z-index: 0;
+
+      .func{
+        color: rgb(0, 0, 0);
+        font-family: $Raleway;
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 34px;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .svg__line4{
+      position: absolute;
+      top: 140px;
+      left: -260px;
+      z-index: 0;
+
+      .func{
+        color: rgb(0, 0, 0);
+        font-family: $Raleway;
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 34px;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .spritespin{
+      cursor: pointer;
+    }
+
+    .stand{
+      display: block;
+      margin: -30px auto;
+    }
+    .inform{
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      color: rgb(0, 0, 0);
+      font-family: $Raleway;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: 34px;
+      position: relative;
+
+      &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 170px;
+        width: 76px;
+        height: 15px;
+        background: url("../img/arrow-left.svg")0 0 no-repeat;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 170px;
+        width: 76px;
+        height: 15px;
+        background: url("../img/arrow-right.svg")0 0 no-repeat;
+      }
+    }
+  }
+
+}
+
+//info
+
+.info{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  padding: 100px 0;
+
+  &__pic{
+    display: block;
+    margin: 0 auto;
+  }
+  &__text{
+    padding: 60px 30px;
+
+    .heading{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 34px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .descript{
+      p{
+        color: rgb(255, 255, 255);
+        font-family: $OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__text2{
+    padding: 0 30px;
+    position: absolute;
+    top: -365px;
+
+    .heading{
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 34px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .descript{
+      margin-bottom: 15px;
+      p{
+        color: rgb(255, 255, 255);
+        font-family: $OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 15px;
+      }
+    }
+    .btn__wrap{
+      text-align: center;
+      width: 100%;
+    }
+    .btn-buy{
+      display: inline-block;
+      width: 164px;
+      height: 44px;
+      line-height: 44px;
+      border-radius: 22px;
+      border: 1px solid rgb(255, 255, 255);
+      background-color: rgb(1, 174, 255);
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      margin-right: 15px;
+      @include transition(all .5s);
+
+      &:hover{
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+        color: rgb(1, 174, 255);
+      }
+    }
+    .btn-shop{
+      display: inline-block;
+      width: 164px;
+      height: 44px;
+      line-height: 44px;
+      border-radius: 22px;
+      border: 3px solid rgb(255, 255, 255);
+      background-color: rgb(255, 255, 255);
+      color: rgb(1, 174, 255);
+      font-family: $Raleway;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      @include transition(all .5s);
+
+      &:hover{
+        border: 3px solid rgb(255, 255, 255);
+        background-color: rgb(1, 174, 255);
+        color: rgb(255, 255, 255);
+      }
+
+    }
+
+  }
+
+  &__first{
+    width: 100%;
+    height: 450px;
+    background-color: rgb(249, 249, 249);
+
+    &-left{
+      width: 50%;
+      float: left;
+      height: 450px;
+
+    }
+    &-right{
+      width: 50%;
+      float: right;
+      height: 0;
+      border-bottom: 450px solid $stack-color;
+      border-left: 100px solid transparent;
+      border-right: 0;
+    }
+  }
+
+  &__second{
+    width: 100%;
+    height: 450px;
+    background-color: rgb(249, 249, 249);
+
+    &-left{
+      width: 50%;
+      float: left;
+      height: 0;
+      border-top: 450px solid $stack-color;
+      border-left: 0;
+      border-right: 100px solid transparent;
+      position: relative;
+    }
+    &-right{
+      width: 50%;
+      float: right;
+      height: 450px;
+      padding: 40px 0;
+    }
+  }
+}
+
+//FAQ
+
+.FAQ{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 0 50px;
+
+  .section__title{
+    text-align: center;
+  }
+
+  .accordion {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    li {
+      position: relative;
+      display: block;
+      border-radius: 0;
+      background-color: $stack-color;
+      margin-bottom: 15px;
+      width: 95%;
+    }
+    .drop {
+      display: none;
+      padding: 15px 15px 10px;
+      color: rgb(0, 0, 0);
+      font-family: $Raleway;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      background-color: $base-color;
+    }
+    a {
+      width: 100%;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 400;
+      line-height: 1.8;
+      font-size: 25px;
+      user-select: none;
+      color: $base-color;
+      font-family: $Raleway;
+      text-decoration: none;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -45px;
+        width: 0;
+        height: 0;
+        border-bottom: 45px solid $stack-color;
+        border-right: 45px solid transparent;
+      }
+
+      .icon-arrow-down{
+        display: inline-block;
+        margin-right: 15px;
+        margin-left: 15px;
+        @include sprite($arrow-down-ico);
+
+      }
+    }
+
+    a.active{
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -45px;
+        width: 0;
+        height: 0;
+        border-top: 45px solid $stack-color;
+        border-bottom: 0;
+        border-right: 45px solid transparent;
+      }
+
+      .icon-arrow-down{
+        display: inline-block;
+        margin-right: 15px;
+        margin-left: 15px;
+        @include sprite($arrow-up-ico);
+      }
+    }
+
+    a.active:after {
+      transform: rotate(45deg);
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+//our team
+
+.team {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  background-color: rgb(249, 249, 249);
+  padding: 85px 0;
+
+  .section__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .description{
+    width: 100%;
+    max-width: 700px;
+    color: rgb(0, 0, 0);
+    font-family: $Raleway;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0 auto 40px;
+  }
+
+  .co-worker{
+    display: block;
+    width: 100%;
+    max-width: 264px;
+    height: 420px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 25px;
+
+    &:hover .co-worker__social{
+      height: 75px;
+
+      a{
+        display: inline-block;
+      }
+    }
+
+    &__photo{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 325px;
+      background-color: rgb(0, 0, 0);
+      position: relative;
+    }
+
+    &__social{
+      width: 100%;
+      max-width: 264px;
+      height: 0;
+      background-color: $base-color;
+      position: absolute;
+      z-index: 100;
+      bottom: 120px;
+      text-align: center;
+      @include transition(all .5s);
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 50px solid $base-color;
+        border-right: 264px solid transparent;
+      }
+
+      a{
+        display: none;
+        margin: 0 10px;
+
+        .flicr{
+          display: inline-block;
+          @include sprite($flickr);
+        }
+        .facebook{
+          display: inline-block;
+          @include sprite($facebook);
+        }
+        .inst{
+          display: inline-block;
+          @include sprite($instagram);
+        }
+        .twitter{
+          display: inline-block;
+          @include sprite($twitter);
+        }
+        .google{
+          display: inline-block;
+          @include sprite($google-plus);
+        }
+      }
+    }
+
+    &__info{
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+      width: 100%;
+      height: 95px;
+      background-color: $stack-color;
+      z-index: 101;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid #01aeff;
+        border-right: 264px solid transparent;
+      }
+
+      .name{
+        display: block;
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 23px;
+        font-weight: bold;
+        line-height: 25px;
+        margin-bottom: 10px;
+      }
+
+      .position{
+        display: block;
+        color: rgb(255, 255, 255);
+        font-family: $Raleway;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+}
+
+//price__plan
+
+.price__plan{
+  width: 100%;
+  max-width: 1920px;
+  height: 770px;
+  min-height: 450px;
+  background: url("../img/parallax-bg.png") top center repeat fixed;
+  margin: 0 auto;
+  position: relative;
+  padding: 85px 0;
+
+ .section__title{
+   color: $base-color;
+   text-align: center;
+ }
+  .plan{
+    width: 100%;
+    max-width: 335px;
+    height: 490px;
+    background-color: rgb(1, 174, 255);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+      -webkit-transform: scale(1.1,1.1);
+      -webkit-transition-timing-function: ease-out;
+      -webkit-transition-duration: 500ms;
+      -moz-transform: scale(1.1,1.1);
+      -moz-transition-timing-function: ease-out;
+      -moz-transition-duration: 500ms;
+      box-shadow: 6px 10px 2px rgba(0, 0, 0, 0.11);
+    }
+
+    &__type{
+      width: 100%;
+      height: 70px;
+      line-height: 70px;
+      background-color: rgb(0, 0, 0);
+      position: relative;
+      color: rgb(255, 255, 255);
+      font-family: $Raleway;
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 35px;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        width: 0;
+        height: 0;
+        border-top: 20px solid black;
+        border-right: 335px solid transparent;
+      }
+    }
+
+    &__conditions{
+      font-family: $Raleway;
+      line-height: 35px;
+      color: rgb(255, 255, 255);
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 25px;
+
+      span{
+        display: inline-block;
+        font-family: $Raleway;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+
+    ul{
+      width: 100%;
+      max-width: 180px;
+      margin: 0 auto 35px;
+
+      li{
+        display: block;
+        text-align: left;
+        font-size: 20px;
+        font-family: $Raleway;
+        font-weight: 400;
+        line-height: 32px;
+      }
+      .ok{
+        color: rgb(247, 247, 247);
+
+        .icon-checkmark{
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          @include sprite($checkmark);
+
+        }
+      }
+      .not{
+        color: rgb(0, 0, 0);
+
+        .icon-not{
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          @include sprite($not);
+
+        }
+      }
+    }
+
+    .btn-buy{
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 230px;
+      width: 100%;
+      height: 50px;
+      border-radius: 25px;
+      background-color: $stack-color;
+      border: 3px solid rgb(255, 255, 255);
+      color: $base-color;
+      font-family: $Raleway;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      @include transition(all .5s);
+
+      &:hover{
+        background-color: rgb(255, 255, 255);
+        border: 3px solid rgb(255, 255, 255);
+        color: $stack-color;
+      }
+    }
+  }
+
+}
+
+//reviews
+
+.reviews{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  padding: 85px 0;
+
+  .section__title{
+    text-align: center;
+    color: rgb(1, 1, 1);
+  }
+
+  .slider-for{
+
+    .slick-slide {
+      &:focus, a {
+        outline: none;
+      }
+    }
+
+    .slide__item{
+      .quotes{
+        display: block;
+        margin: 0 auto 50px;
+        @include sprite($quotes-left);
+      }
+      .review__text{
+        max-width: 896px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 25px;
+        border-left: 1px solid $stack-color;
+        border-right: 1px solid $stack-color;
+        transform: skew(-15deg);
+
+        p{
+          color: rgb(32, 32, 32);
+          font-family: $OpenSans;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          transform: skew(15deg);
+        }
+      }
+    }
+  }
+
+  .slider-nav{
+    margin: 30px auto 50px;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 100px;
+      top: 75px;
+      background-color: $stack-color;
+      width: 100%;
+      max-width: 950px;
+      height: 3px;
+    }
+
+
+    .slick-slide {
+      &:focus, a {
+        outline: none;
+      }
+    }
+    .slick-center{
+      transform: scale(1.1);
+
+      .name{
+        opacity: 1;
+      }
+    }
+
+    span.photo{
+      display: block;
+      border: 8px solid rgb(1, 174, 255);
+      background-color: rgb(0, 0, 0);
+      margin: 10px 20px;
+      transform: skew(-15deg);
+      line-height: 130px;
+      transition: all 300ms ease;
+      color: $base-color;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+      max-width: 156px;
+      cursor: pointer;
+
+      .num{
+        display: block;
+        transform: skew(15deg);
+      }
+    }
+    .name{
+      display: block;
+      color: rgb(0, 0, 0);
+      font-family: $Raleway;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 25px;
+      opacity: 0;
+      padding: 10px 10px 40px;
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 165px;
+        height: 4px;
+        background-color: $stack-color;
+      }
+    }
+  }
+}
+
+//contacts
+
+.contacts{
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  background-color: $stack-color;
+  padding: 85px 0;
+
+  .section__title{
+    text-align: center;
+    color: $base-color;
+    margin-bottom: 40px;
+  }
+  .description{
+    width: 100%;
+    max-width: 700px;
+    color: rgb(255, 255, 255);
+    font-family: $Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 auto 25px;
+  }
+
+}
+
+//map
+
+.map{
+  width: 100%;
+  max-width: 1920px;
+  height: 560px;
+  min-height: 350px;
+  margin: 0 auto;
+  background: url("../img/map.png") 50% 0 no-repeat;
+  -webkit-background-size:cover;
+  background-size: cover;
+  position: relative;
+
+  .marker{
+    position: absolute;
+    cursor: pointer;
+    top: 250px;
+    right: 42%;
+    @include sprite($location-ico);
+  }
+}
+
+//footer
+
+.footer{
+  width: 100%;
+  max-width: 1920px;
+  height: 230px;
+  margin: -230px auto 0;
+  background-color: $stack-color;
+  padding: 85px 0;
+
+  .logo{
+    display: inline-block;
+
+    .icon__logo{
+      display: block;
+      @include sprite($logo-footer);
+    }
+
+  }
+  .social{
+    padding-top: 30px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+
+    a{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 15px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover{
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: -8px;
+          left: -8px;
+          width: 10px;
+          height: 10px;
+          border-top: 3px solid $base-color;
+          border-left: 3px solid $base-color;
+        }
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 18px;
+          right: -8px;
+          width: 10px;
+          height: 10px;
+          border-bottom: 3px solid $base-color;
+          border-right: 3px solid $base-color;
+        }
+      }
+
+      .flickr{
+        display: block;
+        @include sprite($flickr-white);
+      }
+      .facebook{
+        display: block;
+        @include sprite($facebook-white);
+      }
+      .inst{
+        display: block;
+        @include sprite($instagram-white);
+      }
+      .twitter{
+        display: block;
+        @include sprite($twitter-white);
+      }
+      .google{
+        display: block;
+        @include sprite($google-plus-white);
+      }
+    }
+  }
+
+  .info__contact{
+    text-align: right;
+    margin-top: -15px;
+    ul{
+      li{
+        display: block;
+        color: rgb(255, 255, 255);
+        font-family: $OpenSans;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 25px;
+      }
+    }
+  }
+
+}
