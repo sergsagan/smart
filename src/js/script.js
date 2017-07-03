@@ -16,14 +16,14 @@ $(function() {
 	
 	//anchor links
 	
-	/*$(".navbar-nav").on("click","a", function (event) {
+	$(".nav").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 1500);
-	});*/
+	});
 	
-	$('.header__nav li a').click(function () {
+	$('.nav li a').click(function () {
 		$('li a').removeClass('active');
 		$(this).addClass('active');
 		return true;
@@ -66,23 +66,56 @@ $(function() {
 	
 	//modal
 	
-	$('.order,.order-form').click( function(event){
+	$('.btn-buy').click( function(event){
 		event.preventDefault();
 		$('#overlay').fadeIn(400, function(){
-			$('#modal-form').css('display', 'block');
-			$('#modal-form').animate({opacity: 1, top: '20%'}, 200);
+			$('#order-popup').css('display', 'block');
+			$('#order-popup').animate({top: '20%'}, 200);
 		});
 	});
 	
-	$('.form-close').click( function(){
-		$('#modal-form').animate({opacity: 0, top: '45%'}, 200,
+	$('.close-btn').click( function(){
+		$('#order-popup').animate({top: '45%'}, 200,
 			function(){
 				$(this).css('display', 'none');
 				$('#overlay').fadeOut(400);
-				$('.form-of-training, .practices, .course').find(".name, .price, .price .rub").removeClass("active");
 			}
 		);
 	});
+
+    $('.slider1-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.slider1-nav'
+    });
+    $('.slider1-nav').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider1-for',
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
 
 
     $('.responsive').slick({
