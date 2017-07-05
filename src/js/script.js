@@ -29,27 +29,6 @@ $(function() {
 		return true;
 	});
 
-    // $('section[data-type="background"]').each(function(){
-    //     var $bgobj = $(this);
-    //     $(window).scroll(function() {
-    //         var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-    //
-    //         var coords = '50% '+ yPos + 'px';
-    //         $bgobj.css({ backgroundPosition: coords });
-    //     });
-    // });
-
-
-    //Scroll Top
-	
-	// $('#scrollUp').mouseover(function(){
-	// 	$( this ).animate({opacity: 0.65},100);
-	// }).mouseout( function(){
-	// 	$( this ).animate({opacity: 1},100);
-	// }).click(function(e){
-	// 	e.preventDefault();
-	// 	$('body,html').animate({ scrollTop: 1 }, 1000);
-	// });
 
     $stiky = $(".header");
     $window = $(window);
@@ -209,12 +188,6 @@ $(function() {
         j.preventDefault();
     });
 
-
-    $.stellar({
-        horizontalScrolling: false,
-        responsive: true
-
-    });
 
 
     //Аякс отправка форм

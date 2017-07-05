@@ -117,14 +117,6 @@ gulp.task('styles:vendor', function() {
 			          './dist/fonts/*.*'
 		          ]
 	          },
-            /*
-              "normalize.css": {
-                  "main": "./normalize.css"
-              },*/
-
-              "magnific-popup": {
-                  "main": "./dist/magnific-popup.css"
-              },
 
               "slick-carousel": {
                   "main": [
@@ -132,22 +124,8 @@ gulp.task('styles:vendor', function() {
                       "./slick/slick-theme.css",
                       "./slick/fonts/!*.*"
                   ]
-              },
+              }
 
-              "ionrangeslider": {
-                  "main": [
-                      './css/ion.rangeSlider.css',
-                      './css/ion.rangeSlider.skinHTML5.css'
-                  ]
-              },
-
-              "jquery.form-styler": {
-                  "main": "./dist/jquery.formstyler.css"
-              },
-              
-	          "wow": {
-		          "main": "./css/libs/animate.css"
-	          }
           }
   }))
   .pipe(cssFilter)
@@ -187,10 +165,6 @@ gulp.task('js:vendor', function() {
 	          "bootstrap": {
 		          "main": './dist/js/bootstrap.min.js'
 	          },
-              
-	          "magnific-popup": {
-                  "main": "./dist/jquery.magnific-popup.min.js"
-              },
 
              "slick-carousel": {
                   "main": "./slick/slick.min.js"
@@ -199,15 +173,7 @@ gulp.task('js:vendor', function() {
 	          "jquery.stellar": {
 		          "main": './src/jquery.stellar.js'
 	          },
-
-              "jquery.maskedinput": {
-                  "main": "./dist/jquery.maskedinput.min.js"
-              },
-
-              "jquery.form-styler": {
-                  "main": "./dist/jquery.formstyler.min.js"
-              },
-
+              
               "spritespin": {
                   "main": "./release/spritespin.min.js"
               }

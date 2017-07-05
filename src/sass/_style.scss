@@ -1472,22 +1472,11 @@
 
 //map
 
-.map{
+#map{
   width: 100%;
   max-width: 1920px;
-  height: 600px;
-  min-height: 350px;
   margin: 0 auto;
-  position: relative;
-
-  .marker{
-    position: absolute;
-    cursor: pointer;
-    top: 300px;
-    right: 30%;
-    z-index: 10;
-    @include sprite($location-ico);
-  }
+  height: 600px;
 }
 
 //footer

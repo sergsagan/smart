@@ -15,8 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
 
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/vendor.css">
 
@@ -670,10 +668,7 @@
             </div>
         </div>
     </section><!--end-section-contacts-->
-    <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1511.9552687617113!2d-73.9820150375225!3d40.71998587922959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1499089642441" width="1920" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <span class="marker"></span>
-    </section><!--end-section-map-->
+    <section id="map"></section><!--end-section-map-->
     <div class="empty"></div>
 </div>
 
@@ -681,5 +676,39 @@
 
     <script defer src="js/vendor.js"></script>
     <script defer src="js/script.js"></script>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                center: new google.maps.LatLng(-33.91722, 151.23064),
+                mapTypeId: 'roadmap'
+            });
+
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+            var icons = {
+                info: {
+                    icon: 'img/location-ico.png'
+                }
+            };
+
+            var features = [
+                 {
+                    position: new google.maps.LatLng(-33.91784, 151.23094),
+                    type: 'info'
+                }
+            ];
+
+            // Create markers.
+            features.forEach(function(feature) {
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map
+                });
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdkPQBuTJGZYx1ZHFdKxRxJDcfRHjhdCM&callback=initMap"></script>
 </body>
 </html>

@@ -64,9 +64,10 @@
   }
   .hero__content {
     padding-top: 30px;
+    padding-left: 0;
   }
   .hero__content h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0 0 35px;
     text-align: center;
   }
@@ -115,7 +116,7 @@
     line-height: 18px;
   }
   .slider{
-    height: 780px;
+    height: 800px;
     background: none;
     background-color: $stack-color;
     background-size: cover;
@@ -458,10 +459,8 @@
     border-radius: 20px;
     font-size: 16px;
   }
-  .map {
-    height: 350px;
-    min-height: 350px;
-    overflow: hidden;
+  #map {
+    height: 380px;
   }
   .map .marker {
     top: 140px;
@@ -636,9 +635,10 @@
   }
   .hero__content {
     padding-top: 30px;
+    padding-left: 0;
   }
   .hero__content h1 {
-    font-size: 40px;
+    font-size: 38px;
     margin: 0 0 25px;
     text-align: center;
   }
@@ -675,7 +675,7 @@
     margin: 0 auto 40px;
   }
   .slider {
-    height: 700px;
+    height: 725px;
     background: none;
     background-color: $stack-color;
     background-size: cover;
@@ -989,8 +989,8 @@
     border-radius: 22px;
     font-size: 18px;
   }
-  .map .marker {
-    right: 34%;
+  #map {
+    height: 450px;
   }
   .footer .logo .icon__logo {
     margin: 0 auto;
@@ -1116,9 +1116,10 @@
   }
   .hero__content {
     padding-top: 70px;
+    padding-left: 0;
   }
   .hero__content h1 {
-    font-size: 44px;
+    font-size: 43px;
     margin: 0 0 70px;
   }
   .hero__content h1:before {
@@ -1141,9 +1142,12 @@
     font-size: 30px;
     line-height: 30px;
   }
+  .advantages .item {
+    padding: 0 5px;
+  }
   .advantages .item__heading {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 25px;
   }
   .advantages .item__icon-baterry {
     display: inline-block;
@@ -1338,7 +1342,7 @@
     padding: 20px 0;
   }
   .info__text {
-    padding: 25px 0;
+    padding: 25px 15px 25px 55px;
   }
   .info__text .heading {
     font-size: 25px;
@@ -1347,10 +1351,10 @@
   .info__text .descript p {
     font-size: 13px;
     line-height: 18px;
+    margin-bottom: 20px;
   }
   .info__text2 {
-    padding: 0 0;
-    top: -370px;
+    padding: 0 55px 0 5px;
   }
   .info__text2 .heading {
     font-size: 25px;
@@ -1374,7 +1378,7 @@
     font-size: 14px;
   }
   .info__pic {
-    margin: 0 auto;
+    margin: 40px auto;
     width: 220px;
   }
   .info__first-right {
@@ -1396,16 +1400,16 @@
     height: 380px;
   }
   .FAQ .accordion a {
-    font-size: 20px;
+    font-size: 18px;
   }
   .FAQ .accordion a:before {
     right: -36px;
-    border-bottom: 36px solid #01aeff;
+    border-bottom: 32px solid #01aeff;
     border-right: 36px solid transparent;
   }
   .FAQ .accordion a.active:before {
     right: -36px;
-    border-top: 36px solid #01aeff;
+    border-top: 32px solid #01aeff;
     border-bottom: 0;
     border-right: 36px solid transparent;
   }
@@ -1468,8 +1472,8 @@
     max-width: 300px;
     height: 48px;
   }
-  .map .marker {
-    right: 40%;
+  #map {
+    height: 450px;
   }
   #order-popup {
     max-width: 650px;
@@ -1542,7 +1546,7 @@
     width: 247px;
   }
   .hero__content h1 {
-    font-size: 58px;
+    font-size: 57px;
     margin: 0 0 65px;
   }
   .hero__content h1:before {
@@ -1567,12 +1571,19 @@
   }
   .hero__content {
     padding-top: 100px;
+    padding-left: 0;
   }
   .advantages .item__icon-drop {
     margin: 0 auto 20px;
   }
   .advantages .item__icon-service {
     margin: 0 auto 22px;
+  }
+  .advantages .item {
+    padding: 0 5px;
+  }
+  .advantages .item__icon-baterry {
+    margin: 0 auto 30px;
   }
   .slider {
     height: 520px;
@@ -1704,7 +1715,7 @@
     width: 250px;
   }
   .info__text {
-    padding: 40px 10px;
+    padding: 40px 55px;
   }
   .info__text .heading {
     font-size: 30px;
